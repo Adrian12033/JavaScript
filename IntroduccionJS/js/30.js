@@ -14,12 +14,8 @@ const usuarioAutenticado = new Promise( (resolve, reject) => { //arrow function,
 
 
 usuarioAutenticado
-    .then(function(resultado){ // poniendo el resultado ahí estamos leyendo lo que nos da el promise
-        console.log(resultado); // esto de aqui es para que nos muestre en consola el texto 
-    })
-    .catch(function(error){
-        console.log(error); // el catch lo usamos para que coja el reject del promise
-    })
+    .then(resultado => console.log(resultado))// poniendo el resultado ahí estamos leyendo lo que nos da el promise
+    .catch(error => console.log(error)); // el catch lo usamos para que coja el reject del promise
 
 console.log(usuarioAutenticado);
 
