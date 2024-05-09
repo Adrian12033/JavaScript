@@ -2,7 +2,13 @@
 
 const boton = document.querySelector('#boton'); // esto de aquí hace referencia a todo el HTML, es decir, si quieres seleccionar algo del HTML debes iniciar con document siempre.
 
-boton.addEventListener('click', () => { // con esto de aquí indicamos que queremos que haga el botón
-    Notification.requestPermission(); // con esto de aqui nos preguntará si queremos recibir notificaciones
-        then(resultado => console.log(`El resultado es ${resultado}`));
-});
+boton.addEventListener('click', () => {
+ 
+    if(Notification.permission == 'granted') {
+        new Notification('Esta es una notificación', {
+            icon: 'img/ccj.png',
+            body: 'Código con Juan, los mejores tutoriales'
+        })
+    }
+    
+})
