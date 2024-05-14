@@ -18,4 +18,4 @@ console.log(heading2);
 
 //Generar un nuevo enlace
 
-
+const nuevoEnlace = document
